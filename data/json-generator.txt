@@ -1,0 +1,35 @@
+http://www.json-generator.com/j/bIeqvgHFgy?indent=4
+http://habrahabr.ru/post/132286/
+numeric --> integer //изменения в новой версии
+
+[
+    '{{repeat(10, 15)}}',
+    {
+        id: '{{index()}}',
+        guid: '{{guid()}}',
+        name: '{{firstName()}}',
+        family: '{{surname()}}',
+        patronymic: '{{surname()}}',
+        gender: '{{gender()}}',
+        dateBirth: '{{date(new Date(1984, 0, 1), new Date(1998, 0, 1), "YYYY-MM-dd")}}',
+        dateReceipt: '{{date(new Date(2004, 0, 1), new Date(), "YYYY-MM-dd")}}',
+        listItems: function (tags) {
+            var listItem = [
+{'name' : 'Булева алгебра', 'totalHours' : 90, 'skipped' : tags.integer(40, 90), 'goodCause' : tags.integer(0, 20) },
+{'name' : 'Математика', 'totalHours' : 98, 'skipped' : tags.integer(20, 98), 'goodCause' : tags.integer(0, 20) },
+{'name' : 'Астрономия', 'totalHours' : 28, 'skipped' : tags.integer(20, 28), 'goodCause' : tags.integer(0, 20) },
+{'name' : 'Физика', 'totalHours' : 28, 'skipped' : tags.integer(20, 28), 'goodCause' : tags.integer(0, 20) },
+{'name' : 'Начертательная геометрия', 'totalHours' : 28, 'skipped' : tags.integer(20, 28), 'goodCause' : tags.integer(0, 20) },
+{'name' : 'Статистика', 'totalHours' : 48, 'skipped' : tags.integer(30, 48), 'goodCause' : tags.integer(0, 20) },
+{'name' : 'Матан', 'totalHours' : 48, 'skipped' : tags.integer(20, 48), 'goodCause' : tags.integer(0, 20) },
+{'name' : 'История', 'totalHours' : 48, 'skipped' : tags.integer(20, 48), 'goodCause' : tags.integer(0, 20) },
+{'name' : 'Программирование', 'totalHours' : 148, 'skipped' : tags.integer(50, 148), 'goodCause' : tags.integer(0, 20) }
+            ];
+			var result = [];
+            for(var i = 0; i < tags.integer(3, listItem.length - 1); i++) {
+				result[i] = listItem[i];
+			}
+            return result;
+        }
+    }
+]

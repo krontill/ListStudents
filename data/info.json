@@ -1,0 +1,476 @@
+[
+    {
+        "id": 0,
+        "guid": "7758df08-8196-4e6f-91d7-af166794baa4",
+        "name": "Lilly",
+        "family": "Wooten",
+        "patronymic": "Bolton",
+        "gender": "female",
+        "dateBirth": "1988-08-30",
+        "dateReceipt": "2005-06-29",
+        "listItems": [
+            {
+                "name": "Булева алгебра",
+                "totalHours": 90,
+                "skipped": 41,
+                "goodCause": 15
+            },
+            {
+                "name": "Математика",
+                "totalHours": 98,
+                "skipped": 81,
+                "goodCause": 6
+            },
+            {
+                "name": "Астрономия",
+                "totalHours": 28,
+                "skipped": 20,
+                "goodCause": 19
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "guid": "f4b6bdd4-0a1f-4f74-8257-064a3ceb3939",
+        "name": "Kramer",
+        "family": "Foreman",
+        "patronymic": "Powell",
+        "gender": "male",
+        "dateBirth": "1989-08-13",
+        "dateReceipt": "2005-07-17",
+        "listItems": [
+            {
+                "name": "Булева алгебра",
+                "totalHours": 90,
+                "skipped": 86,
+                "goodCause": 12
+            },
+            {
+                "name": "Математика",
+                "totalHours": 98,
+                "skipped": 49,
+                "goodCause": 10
+            },
+            {
+                "name": "Астрономия",
+                "totalHours": 28,
+                "skipped": 25,
+                "goodCause": 14
+            },
+            {
+                "name": "Физика",
+                "totalHours": 28,
+                "skipped": 23,
+                "goodCause": 4
+            },
+            {
+                "name": "Начертательная геометрия",
+                "totalHours": 28,
+                "skipped": 22,
+                "goodCause": 13
+            },
+            {
+                "name": "Статистика",
+                "totalHours": 48,
+                "skipped": 48,
+                "goodCause": 8
+            },
+            {
+                "name": "Матан",
+                "totalHours": 48,
+                "skipped": 39,
+                "goodCause": 20
+            },
+            {
+                "name": "История",
+                "totalHours": 48,
+                "skipped": 20,
+                "goodCause": 5
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "guid": "2f4b9ac0-1db9-4341-8b8f-1ac86bc78392",
+        "name": "Nell",
+        "family": "Barr",
+        "patronymic": "Patel",
+        "gender": "female",
+        "dateBirth": "1984-03-27",
+        "dateReceipt": "2010-04-25",
+        "listItems": [
+            {
+                "name": "Булева алгебра",
+                "totalHours": 90,
+                "skipped": 64,
+                "goodCause": 13
+            },
+            {
+                "name": "Математика",
+                "totalHours": 98,
+                "skipped": 62,
+                "goodCause": 8
+            },
+            {
+                "name": "Астрономия",
+                "totalHours": 28,
+                "skipped": 22,
+                "goodCause": 5
+            },
+            {
+                "name": "Физика",
+                "totalHours": 28,
+                "skipped": 23,
+                "goodCause": 13
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "guid": "6b121fd3-b98f-4251-b6f0-b95eb8aebe60",
+        "name": "Jewel",
+        "family": "Marks",
+        "patronymic": "Holt",
+        "gender": "female",
+        "dateBirth": "1996-04-11",
+        "dateReceipt": "2008-11-02",
+        "listItems": [
+            {
+                "name": "Булева алгебра",
+                "totalHours": 90,
+                "skipped": 82,
+                "goodCause": 13
+            },
+            {
+                "name": "Математика",
+                "totalHours": 98,
+                "skipped": 84,
+                "goodCause": 1
+            },
+            {
+                "name": "Астрономия",
+                "totalHours": 28,
+                "skipped": 25,
+                "goodCause": 12
+            },
+            {
+                "name": "Физика",
+                "totalHours": 28,
+                "skipped": 21,
+                "goodCause": 11
+            },
+            {
+                "name": "Начертательная геометрия",
+                "totalHours": 28,
+                "skipped": 20,
+                "goodCause": 8
+            },
+            {
+                "name": "Статистика",
+                "totalHours": 48,
+                "skipped": 38,
+                "goodCause": 9
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "guid": "989d7d5d-1db7-4969-b638-01d32e5a8a03",
+        "name": "Roberta",
+        "family": "Tucker",
+        "patronymic": "Richardson",
+        "gender": "female",
+        "dateBirth": "1984-04-12",
+        "dateReceipt": "2006-03-09",
+        "listItems": [
+            {
+                "name": "Булева алгебра",
+                "totalHours": 90,
+                "skipped": 85,
+                "goodCause": 6
+            },
+            {
+                "name": "Математика",
+                "totalHours": 98,
+                "skipped": 64,
+                "goodCause": 0
+            },
+            {
+                "name": "Астрономия",
+                "totalHours": 28,
+                "skipped": 26,
+                "goodCause": 11
+            },
+            {
+                "name": "Физика",
+                "totalHours": 28,
+                "skipped": 21,
+                "goodCause": 10
+            },
+            {
+                "name": "Начертательная геометрия",
+                "totalHours": 28,
+                "skipped": 22,
+                "goodCause": 13
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "guid": "24fff3ba-b5f0-4bff-b0f0-323fc0bfa364",
+        "name": "Buckley",
+        "family": "Wall",
+        "patronymic": "Whitley",
+        "gender": "male",
+        "dateBirth": "1987-02-10",
+        "dateReceipt": "2005-01-26",
+        "listItems": [
+            {
+                "name": "Булева алгебра",
+                "totalHours": 90,
+                "skipped": 77,
+                "goodCause": 4
+            },
+            {
+                "name": "Математика",
+                "totalHours": 98,
+                "skipped": 24,
+                "goodCause": 12
+            },
+            {
+                "name": "Астрономия",
+                "totalHours": 28,
+                "skipped": 22,
+                "goodCause": 7
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "guid": "35ef1e92-46fa-4a87-9359-ceae0aaadaf0",
+        "name": "Freeman",
+        "family": "Graves",
+        "patronymic": "Johns",
+        "gender": "male",
+        "dateBirth": "1993-12-28",
+        "dateReceipt": "2011-02-19",
+        "listItems": [
+            {
+                "name": "Булева алгебра",
+                "totalHours": 90,
+                "skipped": 56,
+                "goodCause": 7
+            },
+            {
+                "name": "Математика",
+                "totalHours": 98,
+                "skipped": 26,
+                "goodCause": 9
+            },
+            {
+                "name": "Астрономия",
+                "totalHours": 28,
+                "skipped": 24,
+                "goodCause": 10
+            },
+            {
+                "name": "Физика",
+                "totalHours": 28,
+                "skipped": 23,
+                "goodCause": 15
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "guid": "aee130dc-5cde-4dd1-97a6-b200efc39bff",
+        "name": "Cora",
+        "family": "Mcconnell",
+        "patronymic": "Osborn",
+        "gender": "female",
+        "dateBirth": "1989-11-21",
+        "dateReceipt": "2006-02-04",
+        "listItems": [
+            {
+                "name": "Булева алгебра",
+                "totalHours": 90,
+                "skipped": 40,
+                "goodCause": 20
+            },
+            {
+                "name": "Математика",
+                "totalHours": 98,
+                "skipped": 50,
+                "goodCause": 14
+            },
+            {
+                "name": "Астрономия",
+                "totalHours": 28,
+                "skipped": 25,
+                "goodCause": 15
+            },
+            {
+                "name": "Физика",
+                "totalHours": 28,
+                "skipped": 26,
+                "goodCause": 20
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "guid": "7c12aa27-c3e8-44dd-8506-7b5dc660dc8d",
+        "name": "Doris",
+        "family": "Manning",
+        "patronymic": "Carr",
+        "gender": "female",
+        "dateBirth": "1986-05-27",
+        "dateReceipt": "2012-01-02",
+        "listItems": [
+            {
+                "name": "Булева алгебра",
+                "totalHours": 90,
+                "skipped": 62,
+                "goodCause": 12
+            },
+            {
+                "name": "Математика",
+                "totalHours": 98,
+                "skipped": 93,
+                "goodCause": 6
+            },
+            {
+                "name": "Астрономия",
+                "totalHours": 28,
+                "skipped": 26,
+                "goodCause": 10
+            },
+            {
+                "name": "Физика",
+                "totalHours": 28,
+                "skipped": 20,
+                "goodCause": 15
+            },
+            {
+                "name": "Начертательная геометрия",
+                "totalHours": 28,
+                "skipped": 27,
+                "goodCause": 8
+            },
+            {
+                "name": "Статистика",
+                "totalHours": 48,
+                "skipped": 42,
+                "goodCause": 12
+            },
+            {
+                "name": "Матан",
+                "totalHours": 48,
+                "skipped": 40,
+                "goodCause": 8
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "guid": "0c7f8ac5-bac0-45fb-a260-db6e4e785101",
+        "name": "Brock",
+        "family": "Stevens",
+        "patronymic": "Delaney",
+        "gender": "male",
+        "dateBirth": "1996-06-20",
+        "dateReceipt": "2004-08-13",
+        "listItems": [
+            {
+                "name": "Булева алгебра",
+                "totalHours": 90,
+                "skipped": 83,
+                "goodCause": 16
+            },
+            {
+                "name": "Математика",
+                "totalHours": 98,
+                "skipped": 61,
+                "goodCause": 13
+            },
+            {
+                "name": "Астрономия",
+                "totalHours": 28,
+                "skipped": 21,
+                "goodCause": 13
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "guid": "9f18dfe5-5b1c-487d-9140-712bbe39ba12",
+        "name": "Dean",
+        "family": "Conner",
+        "patronymic": "Meyer",
+        "gender": "male",
+        "dateBirth": "1997-10-29",
+        "dateReceipt": "2010-11-19",
+        "listItems": [
+            {
+                "name": "Булева алгебра",
+                "totalHours": 90,
+                "skipped": 84,
+                "goodCause": 9
+            },
+            {
+                "name": "Математика",
+                "totalHours": 98,
+                "skipped": 91,
+                "goodCause": 10
+            },
+            {
+                "name": "Астрономия",
+                "totalHours": 28,
+                "skipped": 28,
+                "goodCause": 8
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "guid": "6d512be0-4e44-4732-9c57-edbf976aa08a",
+        "name": "Petersen",
+        "family": "Thornton",
+        "patronymic": "Sanchez",
+        "gender": "male",
+        "dateBirth": "1986-11-10",
+        "dateReceipt": "2008-11-16",
+        "listItems": [
+            {
+                "name": "Булева алгебра",
+                "totalHours": 90,
+                "skipped": 56,
+                "goodCause": 13
+            },
+            {
+                "name": "Математика",
+                "totalHours": 98,
+                "skipped": 75,
+                "goodCause": 18
+            },
+            {
+                "name": "Астрономия",
+                "totalHours": 28,
+                "skipped": 28,
+                "goodCause": 12
+            },
+            {
+                "name": "Физика",
+                "totalHours": 28,
+                "skipped": 22,
+                "goodCause": 6
+            },
+            {
+                "name": "Начертательная геометрия",
+                "totalHours": 28,
+                "skipped": 22,
+                "goodCause": 7
+            }
+        ]
+    }
+]
