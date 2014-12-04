@@ -10,14 +10,27 @@ Ext.define('ListStudents.view.Student', {
         {text: 'Имя', dataIndex: 'name'},
         {text: 'Фамилия', dataIndex: 'family'},
         {text: 'Отчество', dataIndex: 'patronymic'},
-        {text: 'gender', dataIndex: 'gender'},
+        {text: 'Пол', dataIndex: 'gender'},
         {
-            text: 'dateBirth',
+            text: 'Дата рождения',
             dataIndex: 'dateBirth',
-            xtype: 'datecolumn',
-            format: 'Y-m-d'
+            width: 130,
+            xtype: 'widgetcolumn',
+            widget: {
+                xtype: 'datefield',
+                format: 'Y-m-d'
+            }
         },
-        {text: 'dateReceipt', dataIndex: 'dateReceipt'}
+        {
+            text: 'Дата поступления',
+            dataIndex: 'dateReceipt',
+            width: 130,
+            xtype: 'widgetcolumn',
+            widget: {
+                xtype: 'datefield',
+                format: 'Y-m-d'
+            }
+        }
     ]
 
 });
