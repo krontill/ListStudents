@@ -11,7 +11,12 @@ Ext.define('ListStudents.view.Student', {
         {text: 'Фамилия', dataIndex: 'family'},
         {text: 'Отчество', dataIndex: 'patronymic'},
         {text: 'gender', dataIndex: 'gender'},
-        {text: 'dateBirth', dataIndex: 'dateBirth'},
+        {
+            text: 'dateBirth',
+            dataIndex: 'dateBirth',
+            xtype: 'datecolumn',
+            format: 'Y-m-d'
+        },
         {text: 'dateReceipt', dataIndex: 'dateReceipt'}
     ]
 

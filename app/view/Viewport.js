@@ -9,6 +9,7 @@ Ext.define('ListStudents.view.Viewport', {
     },
 
     viewModel: 'viewportModel',
+    controller: 'ViewportController',
 
     items: [
         {
@@ -41,7 +42,6 @@ Ext.define('ListStudents.view.Viewport', {
         },
         {
             xtype: 'studentView'
-
         },
         {
             xtype: 'lessonView'
