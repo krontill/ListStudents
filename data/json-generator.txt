@@ -13,7 +13,7 @@ numeric --> integer //изменения в новой версии
         gender: '{{gender()}}',
         dateBirth: '{{date(new Date(1984, 0, 1), new Date(1998, 0, 1), "YYYY-MM-dd")}}',
         dateReceipt: '{{date(new Date(2004, 0, 1), new Date(), "YYYY-MM-dd")}}',
-        listItems: function (tags) {
+        listLessons: function (tags) {
             var listItem = [
 {'name' : 'Булева алгебра', 'totalHours' : 90, 'skipped' : tags.integer(40, 90), 'goodCause' : tags.integer(0, 20) },
 {'name' : 'Математика', 'totalHours' : 98, 'skipped' : tags.integer(20, 98), 'goodCause' : tags.integer(0, 20) },

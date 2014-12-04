@@ -8,7 +8,7 @@
         "gender": "female",
         "dateBirth": "1988-08-30",
         "dateReceipt": "2005-06-29",
-        "listItems": [
+        "listLessons": [
             {
                 "name": "Булева алгебра",
                 "totalHours": 90,
@@ -38,7 +38,7 @@
         "gender": "male",
         "dateBirth": "1989-08-13",
         "dateReceipt": "2005-07-17",
-        "listItems": [
+        "listLessons": [
             {
                 "name": "Булева алгебра",
                 "totalHours": 90,
@@ -98,7 +98,7 @@
         "gender": "female",
         "dateBirth": "1984-03-27",
         "dateReceipt": "2010-04-25",
-        "listItems": [
+        "listLessons": [
             {
                 "name": "Булева алгебра",
                 "totalHours": 90,
@@ -134,7 +134,7 @@
         "gender": "female",
         "dateBirth": "1996-04-11",
         "dateReceipt": "2008-11-02",
-        "listItems": [
+        "listLessons": [
             {
                 "name": "Булева алгебра",
                 "totalHours": 90,
@@ -182,7 +182,7 @@
         "gender": "female",
         "dateBirth": "1984-04-12",
         "dateReceipt": "2006-03-09",
-        "listItems": [
+        "listLessons": [
             {
                 "name": "Булева алгебра",
                 "totalHours": 90,
@@ -224,7 +224,7 @@
         "gender": "male",
         "dateBirth": "1987-02-10",
         "dateReceipt": "2005-01-26",
-        "listItems": [
+        "listLessons": [
             {
                 "name": "Булева алгебра",
                 "totalHours": 90,
@@ -254,7 +254,7 @@
         "gender": "male",
         "dateBirth": "1993-12-28",
         "dateReceipt": "2011-02-19",
-        "listItems": [
+        "listLessons": [
             {
                 "name": "Булева алгебра",
                 "totalHours": 90,
@@ -290,7 +290,7 @@
         "gender": "female",
         "dateBirth": "1989-11-21",
         "dateReceipt": "2006-02-04",
-        "listItems": [
+        "listLessons": [
             {
                 "name": "Булева алгебра",
                 "totalHours": 90,
@@ -326,7 +326,7 @@
         "gender": "female",
         "dateBirth": "1986-05-27",
         "dateReceipt": "2012-01-02",
-        "listItems": [
+        "listLessons": [
             {
                 "name": "Булева алгебра",
                 "totalHours": 90,
@@ -380,7 +380,7 @@
         "gender": "male",
         "dateBirth": "1996-06-20",
         "dateReceipt": "2004-08-13",
-        "listItems": [
+        "listLessons": [
             {
                 "name": "Булева алгебра",
                 "totalHours": 90,
@@ -410,7 +410,7 @@
         "gender": "male",
         "dateBirth": "1997-10-29",
         "dateReceipt": "2010-11-19",
-        "listItems": [
+        "listLessons": [
             {
                 "name": "Булева алгебра",
                 "totalHours": 90,
@@ -440,7 +440,7 @@
         "gender": "male",
         "dateBirth": "1986-11-10",
         "dateReceipt": "2008-11-16",
-        "listItems": [
+        "listLessons": [
             {
                 "name": "Булева алгебра",
                 "totalHours": 90,
