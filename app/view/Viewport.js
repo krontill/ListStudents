@@ -1,7 +1,7 @@
 Ext.define('ListStudents.view.Viewport', {
     extend: 'Ext.Viewport',
 
-    requires: ['ListStudents.view.Student', 'ListStudents.view.Lesson'],
+    requires: ['ListStudents.view.Student', 'ListStudents.view.Lesson', 'ListStudents.view.Menu'],
 
     layout: {
         type: 'vbox',
@@ -46,17 +46,19 @@ Ext.define('ListStudents.view.Viewport', {
 
             defaults: {
                 collapsible: true,
-                split: true
+                split: true,
+                bodyPadding: 10
             },
 
             items: [
                 {
                     title: 'Меню',
-                    region:'west',
+                    region: 'west',
                     margin: '5 0 0 0',
-                    width: 125,
+                    width: 175,
                     minWidth: 100,
-                    maxWidth: 450
+                    maxWidth: 450,
+                    xtype: 'menuView'
                 },
                 {
                     xtype: 'studentView',

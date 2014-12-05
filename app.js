@@ -3,7 +3,7 @@ Ext.application({
 
     models: ['Student', 'Lesson'],
     stores: ['Students', 'Lessons'],
-    view: ['Student', 'Lesson'],
+    view: ['Student', 'Lesson', 'Menu'],
 
     autoCreateViewport: true
 });
