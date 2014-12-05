@@ -41,7 +41,31 @@ Ext.define('ListStudents.view.Viewport', {
             bind: '<h2>{title}</h2>'
         },
         {
-            xtype: 'studentView'
+            layout: 'border',
+            height: 400,
+
+            defaults: {
+                collapsible: true,
+                split: true
+            },
+
+            items: [
+                {
+                    title: 'Меню',
+                    region:'west',
+                    margin: '5 0 0 0',
+                    width: 125,
+                    minWidth: 100,
+                    maxWidth: 450
+                },
+                {
+                    xtype: 'studentView',
+                    title: 'Стандартные личные данные',
+                    collapsible: false,
+                    region: 'center',
+                    margin: '5 0 0 0'
+                }
+            ]
         },
         {
             xtype: 'lessonView'
