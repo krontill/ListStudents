@@ -3,35 +3,34 @@ Ext.define('ListStudents.view.Student', {
     xtype: 'studentView',
 
     store: 'Students',
-    //viewModel: 'viewportModel',
+    viewModel: {
+        type: 'StudentModel'  // references DetailViewModel
+    },
     controller: 'StudentController',
 
-    // Научиться выводить отдельную запись например фамилию первого чувака.
     items: [
         {
             xtype: 'textfield',
             name: 'family',
             fieldLabel: 'Фамилия',
             allowBlank: false,// Обязательное поле
-            /*
-             bind: {
-             value: '{family}'
-             },
-             */
-            emptyText: 'Фамилия'
+            emptyText: 'Фамилия',
+            bind: '{rec.family}'
         },
         {
             xtype: 'textfield',
             name: 'name',
             fieldLabel: 'Имя',
             allowBlank: false,
-            emptyText: 'Имя'
+            emptyText: 'Имя',
+            bind: '{rec.name}'
         },
         {
             xtype: 'textfield',
             name: 'patronymic',
             fieldLabel: 'Отчество',
-            emptyText: 'Отчество'
+            emptyText: 'Отчество',
+            bind: '{rec.patronymic}'
         },
         {
             checked: true,
@@ -52,15 +51,20 @@ Ext.define('ListStudents.view.Student', {
             format: 'Y-m-d',
             name: 'dateBirth',
             fieldLabel: 'Дата рождения',
-            bind: '{birthDate}',
-            maxValue: new Date()
+            maxValue: new Date(),
+            bind: '{rec.dateBirth}'
         },
         {
             xtype: 'datefield',
             format: 'Y-m-d',
             name: 'dateReceipt',
             fieldLabel: 'Дата поступления',
-            maxValue: new Date()
+            maxValue: new Date(),
+            bind: '{rec.dateReceipt}'
+        },
+        {
+            xtype: 'hiddenfield',
+            bind: '{rec.id}'
         }
     ],
 
