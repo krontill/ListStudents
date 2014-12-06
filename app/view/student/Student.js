@@ -3,36 +3,64 @@ Ext.define('ListStudents.view.Student', {
     xtype: 'studentView',
 
     store: 'Students',
-    viewModel: 'viewportModel',
+    //viewModel: 'viewportModel',
     controller: 'StudentController',
 
     // Научиться выводить отдельную запись например фамилию первого чувака.
     items: [
         {
             xtype: 'textfield',
-            name: 'name',
-            fieldLabel: 'Имя {name} {group}',
-            bind: {
-                value: 'name: {title}, group1: {group}'
-            },
-            dataIndex: 'name',
-            width: 700
+            name: 'family',
+            fieldLabel: 'Фамилия',
+            allowBlank: false,// Обязательное поле
+            /*
+             bind: {
+             value: '{family}'
+             },
+             */
+            emptyText: 'Фамилия'
         },
         {
             xtype: 'textfield',
-            allowBlank: false,
+            name: 'name',
             fieldLabel: 'Имя',
-            name: 'name',
-            emptyText: 'user id',
-            dataIndex: 'name'
+            allowBlank: false,
+            emptyText: 'Имя'
         },
         {
             xtype: 'textfield',
-            allowBlank: false,
-            fieldLabel: 'Password',
-            name: 'pass',
-            emptyText: 'password',
-            inputType: 'password'
+            name: 'patronymic',
+            fieldLabel: 'Отчество',
+            emptyText: 'Отчество'
+        },
+        {
+            checked: true,
+            xtype: 'radiofield',
+            name: 'gender',
+            fieldLabel: 'Пол',
+            boxLabel: 'Мужской'
+        },
+        {
+            xtype: 'radiofield',
+            name: 'gender',
+            fieldLabel: '',
+            boxLabel: 'Женский',
+            hideEmptyLabel: false
+        },
+        {
+            xtype: 'datefield',
+            format: 'Y-m-d',
+            name: 'dateBirth',
+            fieldLabel: 'Дата рождения',
+            bind: '{birthDate}',
+            maxValue: new Date()
+        },
+        {
+            xtype: 'datefield',
+            format: 'Y-m-d',
+            name: 'dateReceipt',
+            fieldLabel: 'Дата поступления',
+            maxValue: new Date()
         }
     ],
 
