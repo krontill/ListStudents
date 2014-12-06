@@ -2,7 +2,12 @@ Ext.define('ListStudents.view.Lesson', {
     extend: 'Ext.grid.Panel',
     xtype: 'lessonView',
 
+    viewModel: 'LessonModel',
     store: 'Lessons',
+
+    bind: {
+        title: '{fio}'
+    },
 
     columns: [
         {text: 'Предмет', dataIndex: 'name'},

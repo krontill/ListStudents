@@ -18,5 +18,9 @@ Ext.define('ListStudents.view.StudentController', {
     onDeleteStudentClick: function () {
         Ext.Msg.alert('Студент ххх изменен', 'Delete!');
     }
-
+/*
+    fullName: function fullName(v, record){
+        return record.data.name + ' ' + record.data.family + ' ' + record.data.patronymic;
+    }
+*/
 });

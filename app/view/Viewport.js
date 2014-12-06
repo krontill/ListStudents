@@ -55,8 +55,8 @@ Ext.define('ListStudents.view.Viewport', {
                     title: 'Меню',
                     region: 'west',
                     margin: '5 0 0 0',
-                    width: 175,
-                    minWidth: 100,
+                    width: 220,
+                    minWidth: 200,
                     maxWidth: 450,
                     xtype: 'menuView'
                 },

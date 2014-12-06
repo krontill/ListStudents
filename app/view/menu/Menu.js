@@ -5,16 +5,10 @@ Ext.define('ListStudents.view.Menu', {
     store: 'Students',
     controller: 'MenuController',
 
-    columns: [
-        {
-            text: 'ФИО',
-            dataIndex: 'name'
-        },
-        {text: 'ФИО', dataIndex: 'family'},
-        {text: 'ФИО', dataIndex: 'patronymic'}
-    ]
+    hideHeaders: true,
 
-    //bind: '{fullName}'
-    // формуляр испоьзовать чтобы сделать ФИО и забиндить в один столбец все фио.
+    columns: [
+        {dataIndex: 'fio', width: 180}
+    ]
 
 });

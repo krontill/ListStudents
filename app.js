@@ -5,5 +5,7 @@ Ext.application({
     stores: ['Students', 'Lessons'],
     view: ['Student', 'Lesson', 'Menu'],
 
+
+
     autoCreateViewport: true
 });
