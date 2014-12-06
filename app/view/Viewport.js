@@ -71,6 +71,10 @@ Ext.define('ListStudents.view.Viewport', {
         },
         {
             xtype: 'lessonView'
+        },
+        {
+            xtype: 'displayfield',
+            bind: '{fio}'
         }
     ]
 });
