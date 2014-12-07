@@ -6,7 +6,8 @@ Ext.define('ListStudents.model.Student', {
             name: "fio",
             convert: function (v, record) {
                 return record.data.name + ' ' + record.data.family + ' ' + record.data.patronymic;
-            }},
+            }
+        },
         {name: "id", type: 'int'},
         "guid",
         "name",

@@ -33,18 +33,19 @@ Ext.define('ListStudents.view.Student', {
             bind: '{rec.patronymic}'
         },
         {
-            checked: true,
             xtype: 'radiofield',
             name: 'gender',
             fieldLabel: 'Пол',
-            boxLabel: 'Мужской'
+            boxLabel: 'Мужской',
+            id: 'radioMale'
         },
         {
             xtype: 'radiofield',
             name: 'gender',
             fieldLabel: '',
             boxLabel: 'Женский',
-            hideEmptyLabel: false
+            hideEmptyLabel: false,
+            id: 'radioFemale'
         },
         {
             xtype: 'datefield',
