@@ -20,7 +20,7 @@ Ext.define('ListStudents.view.StudentController', {
     },
 
     onDeleteStudentClick: function () {
-        Ext.Msg.alert('Студент ххх изменен', 'Delete!');
+        Ext.Msg.alert('Студент удален', 'Delete!');
     }
 
 });
