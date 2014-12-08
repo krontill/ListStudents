@@ -16,7 +16,6 @@ Ext.define('ListStudents.view.StudentController', {
             Ext.Msg.alert('Студент ' + studentFio + ' изменен', 'Сохранили изменения!');
         }
 
-
     },
 
     onDeleteStudentClick: function () {

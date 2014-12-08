@@ -5,9 +5,16 @@ Ext.define('ListStudents.view.Lesson', {
     viewModel: 'LessonModel',
     store: 'Lessons',
 
+    bind: '{lesson.name}',
+
     columns: [
-        {text: 'Предмет', dataIndex: 'name'},
-        {text: 'Всего часов', dataIndex: 'totalHours'},
+        /*
+        {
+            text: 'listLessons',
+            dataIndex: 'listLessons'
+        },*/
+        {text: 'Предмет', dataIndex: 'lesson.name'},
+        {text: 'Всего часов', dataIndex: '{lesson.totalHours}'},
         {text: 'Пропущено', dataIndex: 'skipped'},
         {text: 'По уважительной причине', dataIndex: 'goodCause'}
     ]

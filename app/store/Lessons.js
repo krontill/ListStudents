@@ -2,6 +2,7 @@ Ext.define('ListStudents.store.Lessons', {
     extend: 'Ext.data.Store',
     model: 'ListStudents.model.Lesson',
 
+    /*
     data: [
         {
             "name": "Булева алгебра",
@@ -22,5 +23,17 @@ Ext.define('ListStudents.store.Lessons', {
             "goodCause": 19
         }
     ]
+     */
+
+    autoLoad: true,
+    proxy: {
+        type: 'ajax',
+        url: 'data/info.json',
+        reader: {
+            type: 'json',
+            rootProperty: 'listLessons'
+        }
+    }
+
 
 });

@@ -1,12 +1,14 @@
 Ext.define('ListStudents.view.Student', {
     extend: 'Ext.form.Panel',
     xtype: 'studentView',
+    referenceHolder: true,
 
     store: 'Students',
     viewModel: {
         type: 'StudentModel'
     },
     controller: 'StudentController',
+    reference: 'listLessons',
 
     items: [
         {
@@ -68,7 +70,40 @@ Ext.define('ListStudents.view.Student', {
             bind: '{rec.id}'
         },
         {
-            xtype: 'lessonView'
+            xtype: 'displayfield',
+            bind: '{rec.listLessons}'
+        },
+        {
+            xtype: 'displayfield',
+            bind: '{lesson.listLessons}'
+        },
+        {
+            xtype: 'displayfield',
+            bind: '{rec.totalHours}'
+        },
+        {
+            xtype: 'displayfield',
+            bind: '{lesson.totalHours}'
+        }
+        ,
+        {
+            xtype: 'grid',
+
+            columns: [
+                {
+                    text: 'listLessons',
+                    dataIndex: '{lesson.listLessons}'
+                },
+                {text: 'Предмет', dataIndex: '{lesson.name}'},
+                {text: 'Всего часов', dataIndex: '{lesson.totalHours}'},
+                {text: 'Пропущено', dataIndex: 'skipped'},
+                {text: 'По уважительной причине', dataIndex: 'rec.goodCause'}
+            ]
+        },
+        {
+            title: 'Списочек посещаемых предметов',
+            xtype: 'lessonView',
+            margin: '20 0 0 0'
         }
     ],
 
