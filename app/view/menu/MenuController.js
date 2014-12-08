@@ -1,11 +1,7 @@
 Ext.define('ListStudents.view.MenuController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.MenuController',
-    /*
-     init: function () {
-     console.log('MenuController');
-     }
-     */
+
     init: function () {
         this.control({
             'menuView': {
@@ -17,7 +13,8 @@ Ext.define('ListStudents.view.MenuController', {
     onGridSelect: function (grid, record, index, eOpts) {
         // grab a reference to the Detail view...
         // we could have used a controller "ref", but those can also be problematic
-        var detailView = Ext.ComponentQuery.query('studentView')[0];
+        var studentView = Ext.ComponentQuery.query('studentView')[0];
+        var Viewport = Ext.ComponentQuery.query('Viewport')[0];
 
         var radioMale = Ext.getCmp('radioMale');
         var radioFemale = Ext.getCmp('radioFemale');
@@ -30,7 +27,8 @@ Ext.define('ListStudents.view.MenuController', {
         }
 
         //set the form's ViewModel binding
-        detailView.getViewModel().setData({ rec: record });
+        studentView.getViewModel().setData({ rec: record });
+        Viewport.getViewModel().setData({ title: record.data.fio });
     }
 
 });

@@ -5,10 +5,6 @@ Ext.define('ListStudents.view.Lesson', {
     viewModel: 'LessonModel',
     store: 'Lessons',
 
-    bind: {
-        title: '{fio}'
-    },
-
     columns: [
         {text: 'Предмет', dataIndex: 'name'},
         {text: 'Всего часов', dataIndex: 'totalHours'},

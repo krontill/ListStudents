@@ -4,7 +4,7 @@ Ext.define('ListStudents.view.Student', {
 
     store: 'Students',
     viewModel: {
-        type: 'StudentModel'  // references DetailViewModel
+        type: 'StudentModel'
     },
     controller: 'StudentController',
 
@@ -66,6 +66,9 @@ Ext.define('ListStudents.view.Student', {
         {
             xtype: 'hiddenfield',
             bind: '{rec.id}'
+        },
+        {
+            xtype: 'lessonView'
         }
     ],
 

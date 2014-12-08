@@ -1,5 +1,6 @@
 Ext.define('ListStudents.view.Viewport', {
     extend: 'Ext.Viewport',
+    xtype: 'Viewport',
 
     requires: ['ListStudents.view.Student', 'ListStudents.view.Lesson', 'ListStudents.view.Menu'],
 
@@ -38,11 +39,12 @@ Ext.define('ListStudents.view.Viewport', {
         },
         {
             xtype: 'displayfield',
-            bind: '<h2>{title}</h2>'
+            bind: '<h2>{title}</h2>',
+            padding: '5 5 5 25'
         },
         {
             layout: 'border',
-            height: 400,
+            height: 600,
 
             defaults: {
                 collapsible: true,
@@ -68,13 +70,6 @@ Ext.define('ListStudents.view.Viewport', {
                     margin: '5 0 0 0'
                 }
             ]
-        },
-        {
-            xtype: 'lessonView'
-        },
-        {
-            xtype: 'displayfield',
-            bind: '{fio}'
         }
     ]
 });
