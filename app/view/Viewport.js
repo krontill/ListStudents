@@ -44,7 +44,7 @@ Ext.define('ListStudents.view.Viewport', {
         },
         {
             layout: 'border',
-            height: 600,
+            height: 800,
 
             defaults: {
                 collapsible: true,
