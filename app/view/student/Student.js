@@ -10,102 +10,124 @@ Ext.define('ListStudents.view.Student', {
     controller: 'StudentController',
     reference: 'listLessons',
 
-    items: [
-        {
-            xtype: 'textfield',
-            name: 'family',
-            fieldLabel: 'Фамилия',
-            allowBlank: false,// Обязательное поле
-            emptyText: 'Фамилия',
-            bind: '{rec.family}'
-        },
-        {
-            xtype: 'textfield',
-            name: 'name',
-            fieldLabel: 'Имя',
-            allowBlank: false,
-            emptyText: 'Имя',
-            bind: '{rec.name}'
-        },
-        {
-            xtype: 'textfield',
-            name: 'patronymic',
-            fieldLabel: 'Отчество',
-            emptyText: 'Отчество',
-            bind: '{rec.patronymic}'
-        },
-        {
-            xtype: 'radiofield',
-            name: 'gender',
-            fieldLabel: 'Пол',
-            boxLabel: 'Мужской',
-            id: 'radioMale'
-        },
-        {
-            xtype: 'radiofield',
-            name: 'gender',
-            fieldLabel: '',
-            boxLabel: 'Женский',
-            hideEmptyLabel: false,
-            id: 'radioFemale'
-        },
-        {
-            xtype: 'datefield',
-            format: 'Y-m-d',
-            name: 'dateBirth',
-            fieldLabel: 'Дата рождения',
-            maxValue: new Date(),
-            bind: '{rec.dateBirth}'
-        },
-        {
-            xtype: 'datefield',
-            format: 'Y-m-d',
-            name: 'dateReceipt',
-            fieldLabel: 'Дата поступления',
-            maxValue: new Date(),
-            bind: '{rec.dateReceipt}'
-        },
-        {
-            xtype: 'hiddenfield',
-            bind: '{rec.id}'
-        },
-        {
-            xtype: 'displayfield',
-            bind: '{rec.listLessons}'
-        },
-        {
-            xtype: 'displayfield',
-            bind: '{lesson.listLessons}'
-        },
-        {
-            xtype: 'displayfield',
-            bind: '{rec.totalHours}'
-        },
-        {
-            xtype: 'displayfield',
-            bind: '{lesson.totalHours}'
-        }
-        ,
-        {
-            xtype: 'grid',
+    items: {
+        xtype: 'container',
 
-            columns: [
-                {
-                    text: 'listLessons',
-                    dataIndex: '{lesson.listLessons}'
-                },
-                {text: 'Предмет', dataIndex: '{lesson.name}'},
-                {text: 'Всего часов', dataIndex: '{lesson.totalHours}'},
-                {text: 'Пропущено', dataIndex: 'skipped'},
-                {text: 'По уважительной причине', dataIndex: 'rec.goodCause'}
-            ]
+        layout: {
+            type: 'hbox',
+            align: 'stretch'
         },
-        {
-            title: 'Списочек посещаемых предметов',
-            xtype: 'lessonView',
-            margin: '20 0 0 0'
-        }
-    ],
+
+        bodyPadding: 10,
+
+        defaults: {
+            bodyPadding: 10
+        },
+
+        items: [
+            {
+                flex: 1,
+                layout: {
+                    type: 'vbox',
+                    align: 'stretch'
+                },
+
+                bodyPadding: 10,
+
+                defaults: {
+                    bodyPadding: 10
+                },
+
+                items: [
+                    {
+                        xtype: 'textfield',
+                        name: 'family',
+                        fieldLabel: 'Фамилия',
+                        allowBlank: false,// Обязательное поле
+                        emptyText: 'Фамилия',
+                        bind: '{rec.family}'
+                    },
+                    {
+                        xtype: 'textfield',
+                        name: 'name',
+                        fieldLabel: 'Имя',
+                        allowBlank: false,
+                        emptyText: 'Имя',
+                        bind: '{rec.name}'
+                    },
+                    {
+                        xtype: 'textfield',
+                        name: 'patronymic',
+                        fieldLabel: 'Отчество',
+                        emptyText: 'Отчество',
+                        bind: '{rec.patronymic}'
+                    },
+                    {
+                        xtype: 'radiofield',
+                        name: 'gender',
+                        fieldLabel: 'Пол',
+                        boxLabel: 'Мужской',
+                        id: 'radioMale'
+                    },
+                    {
+                        xtype: 'radiofield',
+                        name: 'gender',
+                        fieldLabel: '',
+                        boxLabel: 'Женский',
+                        hideEmptyLabel: false,
+                        id: 'radioFemale'
+                    },
+                    {
+                        xtype: 'datefield',
+                        format: 'Y-m-d',
+                        name: 'dateBirth',
+                        fieldLabel: 'Дата рождения',
+                        maxValue: new Date(),
+                        bind: '{rec.dateBirth}'
+                    },
+                    {
+                        xtype: 'datefield',
+                        format: 'Y-m-d',
+                        name: 'dateReceipt',
+                        fieldLabel: 'Дата поступления',
+                        maxValue: new Date(),
+                        bind: '{rec.dateReceipt}'
+                    },
+                    {
+                        xtype: 'hiddenfield',
+                        bind: '{rec.id}'
+                    }
+                ]
+            },
+            {
+                flex: 1,
+
+                layout: {
+                    type: 'vbox',
+                    align: 'stretch'
+                },
+
+                items: [/*
+                    {
+                        xtype: 'grid',
+                        bind: '{rec.listLessons}',
+                        title: 'Списочек посещаемых предметов',
+                        margin: '0 0 20 0',
+                        columns: [
+                            {text: 'Предмет', dataIndex: 'name', width: '39%'},
+                            {text: 'Всего часов', dataIndex: 'totalHours', width: '15%'},
+                            {text: 'Пропущено', dataIndex: 'skipped', width: '15%'},
+                            {text: 'По уважительной причине', dataIndex: 'goodCause', width: '30%'}
+                        ]
+                    },*/
+                    {
+                        xtype: 'lessonView'
+                    }
+                ]
+            }
+
+        ]
+    },
 
     buttons: [
         {

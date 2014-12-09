@@ -16,11 +16,7 @@ Ext.define('ListStudents.model.Student', {
         "gender",
         {name: "dateBirth", type: 'date'},
         {name: "dateReceipt", type: 'date'},
-        {name: "totalHours", type: 'int'}/*,
-         {
-         name: 'listLessons',
-         reference: 'ListStudents.model.Lesson'
-         }*/
+        {name: "totalHours", type: 'int'}
     ],
 
     associations: [
@@ -40,17 +36,6 @@ Ext.define('ListStudents.model.Student', {
      gender: { type: 'inclusion', list: ['Male', 'Female'] }
 
      },
-
-     hasMany: {
-     model: 'ListStudents.model.Lesson',
-     name: 'listLessons',
-     //foreignKey: 'guid'
-     autoLoad: true
-     }
      */
-    /*
-     ,
 
-
-     */
 });

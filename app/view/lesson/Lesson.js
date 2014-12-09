@@ -3,20 +3,15 @@ Ext.define('ListStudents.view.Lesson', {
     xtype: 'lessonView',
 
     viewModel: 'LessonModel',
-    store: 'Lessons',
 
-    bind: '{lesson.name}',
+    title: 'Списочек посещаемых предметов',
+    bind: '{rec.listLessons}',
 
     columns: [
-        /*
-        {
-            text: 'listLessons',
-            dataIndex: 'listLessons'
-        },*/
-        {text: 'Предмет', dataIndex: 'lesson.name'},
-        {text: 'Всего часов', dataIndex: '{lesson.totalHours}'},
-        {text: 'Пропущено', dataIndex: 'skipped'},
-        {text: 'По уважительной причине', dataIndex: 'goodCause'}
+        {text: 'Предмет', dataIndex: 'name', width: '39%'},
+        {text: 'Всего часов', dataIndex: 'totalHours', width: '15%'},
+        {text: 'Пропущено', dataIndex: 'skipped', width: '15%'},
+        {text: 'По уважительной причине', dataIndex: 'goodCause', width: '30%'}
     ]
 
 });

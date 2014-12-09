@@ -7,4 +7,5 @@ Ext.define('ListStudents.store.Students', {
         type: 'ajax',
         url: 'data/info.json'
     }
+
 });
