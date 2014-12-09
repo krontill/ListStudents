@@ -1,7 +1,7 @@
 Ext.define('ListStudents.store.Lessons', {
     extend: 'Ext.data.Store',
-    model: 'ListStudents.model.Lesson',
-
+    model: 'ListStudents.model.Lesson'
+/*
     autoLoad: true,
     proxy: {
         type: 'ajax',
@@ -11,5 +11,5 @@ Ext.define('ListStudents.store.Lessons', {
             rootProperty: 'listLessons'
         }
     }
-
+*/
 });

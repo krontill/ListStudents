@@ -3,6 +3,7 @@ Ext.define('ListStudents.view.Lesson', {
     xtype: 'lessonView',
 
     viewModel: 'LessonModel',
+    controller: 'LessonController',
 
     title: 'Списочек посещаемых предметов',
     bind: '{rec.listLessons}',

@@ -93,11 +93,11 @@ Ext.define('ListStudents.view.Student', {
                             fieldLabel: 'Дата поступления',
                             maxValue: new Date(),
                             bind: '{rec.dateReceipt}'
-                        },
-                        {
-                            xtype: 'hiddenfield',
-                            bind: '{rec.id}'
-                        }
+                        }/*,
+                         {
+                         xtype: 'hiddenfield',
+                         bind: '{rec.id}'
+                         }*/
                     ]
                 },
                 {
@@ -130,72 +130,133 @@ Ext.define('ListStudents.view.Student', {
             ]
         },
         {
-            xtype: 'cartesian',
-            width: '100%',
-            height: 300,
-            legend: {
-                docked: 'right'
+            xtype: 'container',
+
+            layout: {
+                type: 'hbox',
+                align: 'stretch'
             },
-            bind: {
-                store: '{rec.listLessons}'
+
+            bodyPadding: 10,
+
+            defaults: {
+                bodyPadding: 10
             },
-            insetPadding: 40,
-            flipXY: true,//поворот оси
-            sprites: {
-                type: 'text',
-                text: 'Статистика по учебным предметам',
-                fontSize: 22,
-                width: 100,
-                height: 30,
-                x: 40, // the sprite x position
-                y: 20  // the sprite y position
-            },
-            axes: [
-                {// ось по горизонтали
-                    type: 'numeric',
-                    //fields: 'name',
-                    position: 'bottom',
-                    grid: true,
-                    minimum: 0,
-                    //maximum: 100,
-                    majorTickSteps: 20 // на сколько отрезков делим график по горизонтали
-                    /* По идее в часах лучше чем в процентах
-                    renderer: function (v) {
-                        return v + '%';
-                    }*/
-                },
-                {// ось по вертикали
-                    type: 'category',
-                    fields: 'name',
-                    position: 'left',
-                    grid: true
-                }
-            ],
-            series: [
+
+            items: [
                 {
-                    type: 'bar',
-                    title: [ 'Всего часов', 'Пропущено', 'По уважительной причине'],
-                    xField: 'name',
-                    yField: [ 'totalHours', 'skipped', 'goodCause' ],
-                    axis: 'bottom',
-                    stacked: true,
-                    style: {
-                        opacity: 0.80
+                    xtype: 'cartesian',
+                    width: '50%',
+                    height: 300,
+                    legend: {
+                        docked: 'right'
                     },
-                    highlight: {
-                        fillStyle: 'yellow'
+                    bind: {
+                        store: '{rec.listLessons}'
                     },
-                    tooltip: {
-                        trackMouse: true,
-                        style: 'background: #fff',
-                        renderer: function (storeItem, item) {
-                            var hoursItem = item.series.getTitle()[Ext.Array.indexOf(item.series.getYField(), item.field)];
-                            //console.log(storeItem);
-                            //console.log(item);
-                            //var sotka = storeItem.get('totalHours') + storeItem.get('skipped') + storeItem.get('goodCause');
-                            this.setHtml(hoursItem + ' по предмету ' + storeItem.get('name') + ': ' + storeItem.get(item.field) + ' часов');
+                    insetPadding: 30,
+                    flipXY: true,//поворот оси
+                    sprites: {
+                        type: 'text',
+                        text: 'Статистика по учебным предметам',
+                        fontSize: 22,
+                        width: 100,
+                        height: 30,
+                        x: 40, // the sprite x position
+                        y: 20  // the sprite y position
+                    },
+                    axes: [
+                        {// ось по горизонтали
+                            type: 'numeric',
+                            //fields: 'name',
+                            position: 'bottom',
+                            grid: true,
+                            minimum: 0,
+                            //maximum: 100,
+                            majorTickSteps: 20 // на сколько отрезков делим график по горизонтали
+                            /* По идее в часах лучше чем в процентах
+                             renderer: function (v) {
+                             return v + '%';
+                             }*/
+                        },
+                        {// ось по вертикали
+                            type: 'category',
+                            fields: 'name',
+                            position: 'left',
+                            grid: true
                         }
-                    }
+                    ],
+                    series: [
+                        {
+                            type: 'bar',
+                            title: [ 'Всего часов', 'Пропущено', 'По уважительной причине'],
+                            xField: 'name',
+                            yField: [ 'totalHours', 'skipped', 'goodCause' ],
+                            axis: 'bottom',
+                            stacked: true,
+                            style: {
+                                opacity: 0.80
+                            },
+                            highlight: {
+                                fillStyle: 'yellow'
+                            },
+                            tooltip: {
+                                trackMouse: true,
+                                style: 'background: #fff',
+                                renderer: function (storeItem, item) {
+                                    var hoursItem = item.series.getTitle()[Ext.Array.indexOf(item.series.getYField(), item.field)];
+                                    //console.log(storeItem);
+                                    //console.log(item);
+                                    //var sotka = storeItem.get('totalHours') + storeItem.get('skipped') + storeItem.get('goodCause');
+                                    this.setHtml(hoursItem + ' по предмету ' + storeItem.get('name') + ': ' + storeItem.get(item.field) + ' часов');
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    xtype: 'polar',
+                    width: '50%',
+                    height: 400,
+                    bind: {
+                        store: '{rec.listLessons}'
+                    },
+                    insetPadding: 40,
+                    innerPadding: 20,
+                    legend: {
+                        docked: 'right'
+                    },
+                    interactions: ['rotate', 'itemhighlight'],
+                    sprites: {
+                        type: 'text',
+                        text: 'Соотношение объема учебных программ',
+                        fontSize: 22,
+                        width: 100,
+                        height: 30,
+                        x: 40, // the sprite x position
+                        y: 20  // the sprite y position
+                    },
+                    series: [
+                        {
+                            type: 'pie',
+                            angleField: 'totalHours',
+                            donut: 50,
+                            label: {
+                                field: 'name',
+                                display: 'outside'
+                            },
+                            highlight: {
+                                fillStyle: 'yellow'
+                            },
+                            tooltip: {
+                                trackMouse: true,
+                                style: 'background: #fff',
+                                renderer: function (storeItem, item) {
+                                    this.setHtml(storeItem.get('name') + ': ' + storeItem.get('totalHours') + ' часов');
+                                }
+                            }
+                        }
+                    ]
                 }
             ]
         }
