@@ -36,7 +36,8 @@ Ext.define('ListStudents.view.Student', {
                     bodyPadding: 10,
 
                     defaults: {
-                        bodyPadding: 10
+                        bodyPadding: 10,
+                        labelWidth: 150
                     },
 
                     items: [
@@ -159,7 +160,7 @@ Ext.define('ListStudents.view.Student', {
                     sprites: {
                         type: 'text',
                         text: 'Статистика по учебным предметам',
-                        fontSize: 22,
+                        fontSize: 18,
                         width: 100,
                         height: 30,
                         x: 40, // the sprite x position
@@ -230,7 +231,7 @@ Ext.define('ListStudents.view.Student', {
                     sprites: {
                         type: 'text',
                         text: 'Соотношение объема учебных программ',
-                        fontSize: 22,
+                        fontSize: 18,
                         width: 100,
                         height: 30,
                         x: 40, // the sprite x position
