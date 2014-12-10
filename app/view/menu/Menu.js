@@ -4,6 +4,9 @@ Ext.define('ListStudents.view.Menu', {
 
     store: 'Students',
     controller: 'MenuController',
+    viewModel: {
+        type: 'MenuModel'
+    },
 
     hideHeaders: true,
 
