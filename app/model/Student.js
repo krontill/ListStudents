@@ -27,16 +27,12 @@ Ext.define('ListStudents.model.Student', {
             type: 'hasMany',
             autoLoad: true
         }
-    ]
+    ],
 
-    /*
-     validators: {
-     name: { type: 'length', min: 2, message: 'В поле имени должно быть болье 2 символов!' },
-     family: { type: 'length', min: 2, message: 'В поле фамилии должно быть болье 2 символов!' },
-     patronymic: { type: 'length', min: 2, message: 'В поле отчества должно быть болье 2 символов!' },
-     gender: { type: 'inclusion', list: ['Male', 'Female'] }
-
-     },
-     */
+    validators: {
+        name: { type: 'presence', message: 'Это поле не должно быть пустым!' },
+        family: { type: 'presence', message: 'Это поле не должно быть пустым!' },
+        patronymic: { type: 'presence', message: 'Это поле не должно быть пустым!' }
+    }
 
 });

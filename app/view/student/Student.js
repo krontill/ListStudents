@@ -10,6 +10,8 @@ Ext.define('ListStudents.view.Student', {
     controller: 'StudentController',
     reference: 'listLessons',
 
+    modelValidation: true,
+
     items: [
         {
             xtype: 'container',
@@ -47,6 +49,7 @@ Ext.define('ListStudents.view.Student', {
                             fieldLabel: 'Фамилия',
                             allowBlank: false,// Обязательное поле
                             emptyText: 'Фамилия',
+                            msgTarget: 'side',
                             bind: '{rec.family}'
                         },
                         {
@@ -55,13 +58,16 @@ Ext.define('ListStudents.view.Student', {
                             fieldLabel: 'Имя',
                             allowBlank: false,
                             emptyText: 'Имя',
+                            msgTarget: 'side',
                             bind: '{rec.name}'
                         },
                         {
                             xtype: 'textfield',
                             name: 'patronymic',
                             fieldLabel: 'Отчество',
+                            allowBlank: false,
                             emptyText: 'Отчество',
+                            msgTarget: 'side',
                             bind: '{rec.patronymic}'
                         },
                         {

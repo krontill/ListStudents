@@ -46,6 +46,34 @@ Ext.define('ListStudents.view.LessonController', {
         var studentView = Ext.ComponentQuery.query('lessonView')[0];
         var selection = studentView.getSelectionModel().getSelection()[0];
         selection.drop();
+    },
+
+    onSaveClick: function () {
+        // Save the changes pending in the dialog's child session back to the
+        // parent session.
+        var dialog = this.dialog,
+            form = this.lookupReference('form'),
+            isEdit = this.isEdit,
+            id;
+
+        if (form.isValid()) {
+            if (!isEdit) {
+                // Since we're not editing, we have a newly inserted record. Grab the id of
+                // that record that exists in the child session
+                id = dialog.getViewModel().get('theCustomer').id;
+            }
+            dialog.getSession().save();
+            if (!isEdit) {
+                // Use the id of that child record to find the phantom in the parent session,
+                // we can then use it to insert the record into our store
+                this.getStore('customers').add(this.getSession().getRecord('Customer', id));
+            }
+            this.onCancelClick();
+        }
+    },
+
+    onCancelClick: function () {
+        this.dialog = Ext.destroy(this.dialog);
     }
 
 });

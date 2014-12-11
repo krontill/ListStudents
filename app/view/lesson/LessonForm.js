@@ -18,7 +18,7 @@ Ext.define('ListStudents.view.LessonForm', {
         bodyPadding: 10,
         border: false,
         // use the Model's validations for displaying form errors
-        //modelValidation: true, пока без валиадции
+        modelValidation: true,
         layout: {
             type: 'vbox',
             align: 'stretch'
@@ -34,7 +34,13 @@ Ext.define('ListStudents.view.LessonForm', {
                 allowBlank: false,
                 //reference: 'name',
                 msgTarget: 'side', //Где будет находится ошибка валидации
-                bind: '{rec.listLessons.name}'
+                bind: '{rec.listLessons.name}',
+                validators: [
+                    {
+                        type: 'presence',
+                        message: 'Must be in the format xxx-xxx-xxxx'
+                    }
+                ]
             },
             {
                 xtype: 'textfield',
