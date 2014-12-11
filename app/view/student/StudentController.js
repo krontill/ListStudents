@@ -29,10 +29,13 @@ Ext.define('ListStudents.view.StudentController', {
 
     },
 
-    onDeleteStudentClick: function (button) {
-        //var customerGrid = this.lookupReference('customerGrid');
-        //var selection = customerGrid.getSelectionModel().getSelection()[0];
-        //selection.drop();
+    onDeleteStudentClick: function () {
+        var menuView = Ext.ComponentQuery.query('menuView')[0];
+        var selection = menuView.getSelectionModel().getSelection()[0];
+        selection.drop();
+
+        var Viewport = Ext.ComponentQuery.query('Viewport')[0];
+        Viewport.getViewModel().setData({ title: 'Студент удален. Выберите нового.'});
     }
 
 });
