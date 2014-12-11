@@ -7,6 +7,7 @@ Ext.define('ListStudents.view.Lesson', {
 
     title: 'Списочек посещаемых предметов',
     bind: '{rec.listLessons}',
+    reference: 'lessonGrid',// Надо для дизеблинга кнопки удаления учебного предмета, если нет записей в таблице.
 
     columns: [
         {

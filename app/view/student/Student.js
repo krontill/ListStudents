@@ -100,11 +100,7 @@ Ext.define('ListStudents.view.Student', {
                             fieldLabel: 'Дата поступления',
                             maxValue: new Date(),
                             bind: '{rec.dateReceipt}'
-                        }/*,
-                         {
-                         xtype: 'hiddenfield',
-                         bind: '{rec.id}'
-                         }*/
+                        }
                     ]
                 },
                 {
@@ -150,6 +146,10 @@ Ext.define('ListStudents.view.Student', {
                 bodyPadding: 10
             },
 
+            bind: {
+                hidden: '{!rec}'
+            },
+
             items: [
                 {
                     xtype: 'cartesian',
@@ -175,11 +175,9 @@ Ext.define('ListStudents.view.Student', {
                     axes: [
                         {// ось по горизонтали
                             type: 'numeric',
-                            //fields: 'name',
                             position: 'bottom',
                             grid: true,
                             minimum: 0,
-                            //maximum: 100,
                             majorTickSteps: 20 // на сколько отрезков делим график по горизонтали
                             /* По идее в часах лучше чем в процентах
                              renderer: function (v) {
@@ -212,9 +210,6 @@ Ext.define('ListStudents.view.Student', {
                                 style: 'background: #fff',
                                 renderer: function (storeItem, item) {
                                     var hoursItem = item.series.getTitle()[Ext.Array.indexOf(item.series.getYField(), item.field)];
-                                    //console.log(storeItem);
-                                    //console.log(item);
-                                    //var sotka = storeItem.get('totalHours') + storeItem.get('skipped') + storeItem.get('goodCause');
                                     this.setHtml(hoursItem + ' по предмету ' + storeItem.get('name') + ': ' + storeItem.get(item.field) + ' часов');
                                 }
                             }
