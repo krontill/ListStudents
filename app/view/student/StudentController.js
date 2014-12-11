@@ -29,8 +29,10 @@ Ext.define('ListStudents.view.StudentController', {
 
     },
 
-    onDeleteStudentClick: function () {
-        Ext.Msg.alert('Студент удален', 'Delete!');
+    onDeleteStudentClick: function (button) {
+        //var customerGrid = this.lookupReference('customerGrid');
+        //var selection = customerGrid.getSelectionModel().getSelection()[0];
+        //selection.drop();
     }
 
 });
