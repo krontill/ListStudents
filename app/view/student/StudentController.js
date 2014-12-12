@@ -2,6 +2,7 @@ Ext.define('ListStudents.view.StudentController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.StudentController',
 
+    /*
     onSaveChangeStudentClick: function () {
         var studentView = Ext.ComponentQuery.query('studentView')[0];
         var studentData = studentView.getViewModel().getData();
@@ -28,7 +29,7 @@ Ext.define('ListStudents.view.StudentController', {
             studentData.rec.data.fio = newStudentFio; //Записываем изменение фио
         }
 
-    },
+    },*/
 
     onDeleteStudentClick: function () {
         var menuView = Ext.ComponentQuery.query('menuView')[0];

@@ -25,7 +25,7 @@ Ext.define('ListStudents.view.Viewport', {
             },
 
             bind: {
-                title: '{title}'
+                title: '{title.fio}'
             },
 
             items: [

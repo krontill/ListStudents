@@ -264,13 +264,13 @@ Ext.define('ListStudents.view.Student', {
         }
     ],
 
-    buttons: [
+    buttons: [/*
         {
             text: 'Сохранить изменения',
             listeners: {
                 click: 'onSaveChangeStudentClick'
             }
-        },
+        },*/
         {
             text: 'Удалить',
             listeners: {

@@ -3,7 +3,7 @@ Ext.define('ListStudents.view.ViewportModel', {
     alias: 'viewmodel.viewportModel',
 
     data: {
-        title: 'Выберите студента из списка',
+        title: { fio: 'Выберите студента из списка'},
         group: 'МТ-202'
     }
 });

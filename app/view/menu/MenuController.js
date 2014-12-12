@@ -29,7 +29,7 @@ Ext.define('ListStudents.view.MenuController', {
         //set the form's ViewModel binding
         studentView.getViewModel().setData({ rec: record });
 
-        Viewport.getViewModel().setData({ title: 'Студент: ' + record.data.fio });
+        Viewport.getViewModel().setData({ title: record});
     }
 
 });
