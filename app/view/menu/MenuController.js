@@ -11,8 +11,6 @@ Ext.define('ListStudents.view.MenuController', {
     },
 
     onGridSelect: function (grid, record, index, eOpts) {
-        // grab a reference to the Detail view...
-        // we could have used a controller "ref", but those can also be problematic
         var studentView = Ext.ComponentQuery.query('studentView')[0];
         var Viewport = Ext.ComponentQuery.query('Viewport')[0];
 

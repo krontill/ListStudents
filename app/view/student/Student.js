@@ -76,10 +76,9 @@ Ext.define('ListStudents.view.Student', {
                             fieldLabel: 'Пол',
                             boxLabel: 'Мужской',
                             id: 'radioMale',
-                            //handler: 'clickMale'
                             listeners: {
                                 click: {
-                                    element: 'el', //bind to the underlying el property on the panel
+                                    element: 'el',
                                     fn: 'clickMale'
                                 }
                             }
@@ -91,10 +90,9 @@ Ext.define('ListStudents.view.Student', {
                             boxLabel: 'Женский',
                             hideEmptyLabel: false,
                             id: 'radioFemale',
-                            //handler: 'clickFemale'
                             listeners: {
                                 click: {
-                                    element: 'el', //bind to the underlying el property on the panel
+                                    element: 'el',
                                     fn: 'clickFemale'
                                 }
                             }
@@ -126,19 +124,6 @@ Ext.define('ListStudents.view.Student', {
                     },
 
                     items: [
-                        /*
-                         {
-                         xtype: 'grid',
-                         bind: '{rec.listLessons}',
-                         title: 'Списочек посещаемых предметов',
-                         margin: '0 0 20 0',
-                         columns: [
-                         {text: 'Предмет', dataIndex: 'name', width: '39%'},
-                         {text: 'Всего часов', dataIndex: 'totalHours', width: '15%'},
-                         {text: 'Пропущено', dataIndex: 'skipped', width: '15%'},
-                         {text: 'По уважительной причине', dataIndex: 'goodCause', width: '30%'}
-                         ]
-                         },*/
                         {
                             xtype: 'lessonView'
                         }
