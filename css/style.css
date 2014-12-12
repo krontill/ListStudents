@@ -1,21 +1,21 @@
-#panel-1020,
-#panel-1026,
-#polar-1039,
-#cartesian-1035 {
+#panel-1022,
+#panel-1028,
+#polar-1044,
+#cartesian-1040 {
     left: 0 !important;
     position: relative !important;
 }
 
-#container-1019-targetEl,
-#container-1034-targetEl {
+#container-1021-targetEl,
+#container-1039-targetEl {
     height: auto;
     position: relative;
 }
 
-#studentView-1018,
-#studentView-1018-body,
+#studentView-1020,
+#studentView-1020-body,
 #ext-element-1,
-#container-1019-innerCt,
-#container-1034-innerCt {
+#container-1021-innerCt,
+#container-1039-innerCt {
     height: auto !important;
 }
