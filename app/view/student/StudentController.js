@@ -2,6 +2,20 @@ Ext.define('ListStudents.view.StudentController', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.StudentController',
 
+    clickMale: function () {
+        var studentView = Ext.ComponentQuery.query('studentView')[0];
+        var newRec = studentView.getViewModel().getData();
+        newRec.rec.data.gender = 'male';
+        studentView.getViewModel().setData({ rec: newRec.rec });
+    },
+
+    clickFemale: function () {
+        var studentView = Ext.ComponentQuery.query('studentView')[0];
+        var newRec = studentView.getViewModel().getData();
+        newRec.rec.data.gender = 'female';
+        studentView.getViewModel().setData({ rec: newRec.rec });
+    },
+
     onDeleteStudentClick: function () {
         var menuView = Ext.ComponentQuery.query('menuView')[0];
         var selection = menuView.getSelectionModel().getSelection()[0];

@@ -75,7 +75,14 @@ Ext.define('ListStudents.view.Student', {
                             name: 'gender',
                             fieldLabel: 'Пол',
                             boxLabel: 'Мужской',
-                            id: 'radioMale'
+                            id: 'radioMale',
+                            //handler: 'clickMale'
+                            listeners: {
+                                click: {
+                                    element: 'el', //bind to the underlying el property on the panel
+                                    fn: 'clickMale'
+                                }
+                            }
                         },
                         {
                             xtype: 'radiofield',
@@ -83,7 +90,14 @@ Ext.define('ListStudents.view.Student', {
                             fieldLabel: '',
                             boxLabel: 'Женский',
                             hideEmptyLabel: false,
-                            id: 'radioFemale'
+                            id: 'radioFemale',
+                            //handler: 'clickFemale'
+                            listeners: {
+                                click: {
+                                    element: 'el', //bind to the underlying el property on the panel
+                                    fn: 'clickFemale'
+                                }
+                            }
                         },
                         {
                             xtype: 'datefield',
