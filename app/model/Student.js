@@ -16,8 +16,7 @@ Ext.define('ListStudents.model.Student', {
         "patronymic",
         "gender",
         {name: "dateBirth", type: 'date'},
-        {name: "dateReceipt", type: 'date'},
-        {name: "totalHours", type: 'int'}
+        {name: "dateReceipt", type: 'date'}
     ],
 
     associations: [

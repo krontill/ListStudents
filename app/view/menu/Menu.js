@@ -12,6 +12,13 @@ Ext.define('ListStudents.view.Menu', {
 
     columns: [
         {dataIndex: 'fio', width: 180}
+    ],
+
+    tbar: [
+        {
+            text: 'Добавить студента',
+            handler: 'onAddStudentClick'
+        }
     ]
 
 });

@@ -146,9 +146,11 @@ Ext.define('ListStudents.view.Student', {
                 bodyPadding: 10
             },
 
+            /*
             bind: {
                 hidden: '{!rec}'
-            },
+            }, // из-за этого частенько глючило отображение - не подгружались графики пока размер экрана не изменишь.
+            */
 
             items: [
                 {
@@ -264,15 +266,12 @@ Ext.define('ListStudents.view.Student', {
         }
     ],
 
-    buttons: [/*
-        {
-            text: 'Сохранить изменения',
-            listeners: {
-                click: 'onSaveChangeStudentClick'
-            }
-        },*/
+    buttons: [
         {
             text: 'Удалить',
+            bind: {
+                disabled: '{!rec}'
+            },
             listeners: {
                 click: 'onDeleteStudentClick'
             }

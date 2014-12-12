@@ -28,8 +28,24 @@ Ext.define('ListStudents.view.MenuController', {
 
         //set the form's ViewModel binding
         studentView.getViewModel().setData({ rec: record });
-
         Viewport.getViewModel().setData({ title: record});
+    },
+
+    onAddStudentClick: function () {
+        var menuView = Ext.ComponentQuery.query('menuView')[0];
+        var totalCount = menuView.getStore().data.items.length;
+
+        var newStudent = new ListStudents.model.Student({
+            "id": totalCount,
+            "name": "Name",
+            "family": "Family",
+            "patronymic": "Patronymic",
+            gender: 'female',// феминистки в восторге =)
+            dateBirth: Ext.Date.clearTime(new Date()),
+            dateReceipt: Ext.Date.clearTime(new Date())
+        });
+
+        menuView.getStore().insert(0, newStudent);
     }
 
 });
