@@ -12,6 +12,10 @@ Ext.define('ListStudents.view.Student', {
 
     modelValidation: true,
 
+    bind: {
+        disabled: '{!rec}'
+    },
+
     items: [
         {
             xtype: 'container',
@@ -144,12 +148,6 @@ Ext.define('ListStudents.view.Student', {
             defaults: {
                 bodyPadding: 10
             },
-
-            /*
-            bind: {
-                hidden: '{!rec}'
-            }, // из-за этого частенько глючило отображение - не подгружались графики пока размер экрана не изменишь.
-            */
 
             items: [
                 {

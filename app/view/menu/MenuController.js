@@ -35,9 +35,9 @@ Ext.define('ListStudents.view.MenuController', {
 
         var newStudent = new ListStudents.model.Student({
             "id": totalCount,
-            "name": "Name",
-            "family": "Family",
-            "patronymic": "Patronymic",
+            "name": "Имя",
+            "family": "Фамилия",
+            "patronymic": "Отчество",
             gender: 'female',// феминистки в восторге =)
             dateBirth: Ext.Date.clearTime(new Date()),
             dateReceipt: Ext.Date.clearTime(new Date())

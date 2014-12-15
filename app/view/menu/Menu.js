@@ -11,7 +11,7 @@ Ext.define('ListStudents.view.Menu', {
     hideHeaders: true,
 
     columns: [
-        {dataIndex: 'fio', width: 180}
+        {dataIndex: 'fio', width: '98%'}
     ],
 
     tbar: [

@@ -2,7 +2,7 @@ Ext.application({
     name: 'ListStudents',
 
     models: ['Student', 'Lesson'],
-    stores: ['Students', 'Lessons'],
+    stores: ['Students'],
     view: ['Student', 'Lesson', 'Menu'],
 
 

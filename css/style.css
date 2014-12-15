@@ -19,3 +19,4 @@
 #container-1039-innerCt {
     height: auto !important;
 }
+/* По фен-шую в ext.js нельзя использовать id а надо только class. */

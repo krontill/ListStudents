@@ -25,13 +25,13 @@ Ext.define('ListStudents.view.Viewport', {
             },
 
             bind: {
-                title: '{title.fio}'
+                title: 'Список студентов {group}'
             },
 
             items: [
                 {
                     xtype: 'displayfield',
-                    bind: '<h2>Список студентов {group}</h2>',
+                    bind: '<h2>{title.fio}</h2>',
                     padding: '0 0 0 50',
                     flex: 1
                 },
