@@ -6,6 +6,6 @@ Ext.define('ListStudents.store.Students', {
     proxy: {
         type: 'ajax',
         url: 'data/info.json'
-    }
+    }// Лучше во viewmodel прописывать, а не отдельно store создавать.
 
 });

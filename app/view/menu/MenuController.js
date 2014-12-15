@@ -16,13 +16,9 @@ Ext.define('ListStudents.view.MenuController', {
 
         var radioMale = Ext.getCmp('radioMale');
         var radioFemale = Ext.getCmp('radioFemale');
-        if (record.data.gender == 'male') {
-            radioMale.setValue(true);
-            radioFemale.setValue(false);
-        } else {
-            radioMale.setValue(false);
-            radioFemale.setValue(true);
-        }
+        var gender = record.data.gender == 'male';
+        radioMale.setValue(gender);
+        radioFemale.setValue(!gender);
 
         //set the form's ViewModel binding
         studentView.getViewModel().setData({ rec: record });
@@ -30,8 +26,7 @@ Ext.define('ListStudents.view.MenuController', {
     },
 
     onAddStudentClick: function () {
-        var menuView = Ext.ComponentQuery.query('menuView')[0];
-        var totalCount = menuView.getStore().data.items.length;
+        var totalCount = this.getView('menuView').getStore().data.items.length;
 
         var newStudent = new ListStudents.model.Student({
             "id": totalCount,
@@ -43,7 +38,7 @@ Ext.define('ListStudents.view.MenuController', {
             dateReceipt: Ext.Date.clearTime(new Date())
         });
 
-        menuView.getStore().insert(0, newStudent);
+        this.getView('menuView').getStore().insert(0, newStudent);
     }
 
 });

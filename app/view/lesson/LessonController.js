@@ -19,14 +19,12 @@ Ext.define('ListStudents.view.LessonController', {
             goodCause: 0
         });
 
-        var lessonView = Ext.ComponentQuery.query('lessonView')[0];
-        lessonView.getStore().insert(0, rec);
+        this.getView('lessonView').getStore().insert(0, rec);
 
     },
 
     onDeleteLessonClick: function () {
-        var lessonView = Ext.ComponentQuery.query('lessonView')[0];
-        var selection = lessonView.getSelectionModel().getSelection()[0];
+        var selection = this.getView('lessonView').getSelectionModel().getSelection()[0];
         selection.drop();
     }
 

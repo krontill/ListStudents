@@ -1,6 +1,6 @@
 Ext.define('ListStudents.view.Menu', {
     extend: 'Ext.grid.Panel',
-    xtype: 'menuView',
+    alias: 'widget.menuView',
 
     store: 'Students',
     controller: 'MenuController',

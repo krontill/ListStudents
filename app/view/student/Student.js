@@ -1,6 +1,6 @@
 Ext.define('ListStudents.view.Student', {
     extend: 'Ext.form.Panel',
-    xtype: 'studentView',
+    alias: 'widget.studentView',
     referenceHolder: true,
 
     store: 'Students',
@@ -121,11 +121,7 @@ Ext.define('ListStudents.view.Student', {
                 },
                 {
                     flex: 1,
-
-                    layout: {
-                        type: 'vbox',
-                        align: 'stretch'
-                    },
+                    layout: 'fit',
 
                     items: [
                         {

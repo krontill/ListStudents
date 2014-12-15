@@ -3,17 +3,15 @@ Ext.define('ListStudents.view.StudentController', {
     alias: 'controller.StudentController',
 
     clickMale: function () {
-        var studentView = Ext.ComponentQuery.query('studentView')[0];
-        var newRec = studentView.getViewModel().getData();
+        var newRec = this.getViewModel().getData();
         newRec.rec.data.gender = 'male';
-        studentView.getViewModel().setData({ rec: newRec.rec });
+        this.getViewModel().setData({ rec: newRec.rec });
     },
 
     clickFemale: function () {
-        var studentView = Ext.ComponentQuery.query('studentView')[0];
-        var newRec = studentView.getViewModel().getData();
+        var newRec = this.getViewModel().getData();
         newRec.rec.data.gender = 'female';
-        studentView.getViewModel().setData({ rec: newRec.rec });
+        this.getViewModel().setData({ rec: newRec.rec });
     },
 
     onDeleteStudentClick: function () {

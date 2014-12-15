@@ -1,6 +1,6 @@
 Ext.define('ListStudents.view.Viewport', {
     extend: 'Ext.Viewport',
-    xtype: 'Viewport',
+    alias: 'widget.Viewport',
 
     requires: ['ListStudents.view.Student', 'ListStudents.view.Lesson', 'ListStudents.view.Menu'],
     viewModel: 'viewportModel',
